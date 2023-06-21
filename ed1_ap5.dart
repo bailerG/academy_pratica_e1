@@ -1,6 +1,6 @@
 void main() {
-  const pessoa = Pessoa("Joao", "Guilherme", 15, true, 55.25, "Brasileiro");
-  print(pessoa.toString());
+  const g = Pessoa("Joao", "Almeida", 28, false, 102.285, null);
+  print(g.toString());
 }
 
 class Pessoa {
@@ -21,9 +21,9 @@ class Pessoa {
   final String? nacionalidade;
 
   String toString() {
-    var formatado = "";
+    var formatado = "----------|Aqui estão os dados dessa pessoa:|----------\n";
 
-    formatado += "Nome: $nome $sobrenome\n";
+    formatado += "\nNome: $nome $sobrenome\n";
 
     if (idade >= 18) {
       formatado += "Idade: $idade (Maior de Idade)\n";
@@ -44,6 +44,8 @@ class Pessoa {
     } else {
       formatado += "Nacionalidade: $nacionalidade\n";
     }
+
+    formatado += "\n----------|Obrigado!|----------\n";
 
     return formatado;
   }
